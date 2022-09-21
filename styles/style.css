@@ -1,5 +1,47 @@
+html {
+    background-color: rgb(246, 231, 252);
+}
+
 p {
-    color: pink;
+    color: rgb(121, 13, 76);
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}   
+
+/*This is a Child Selector, in notes week3sep20 More Selectors and Specifity*/
+nav > a {
+    background-color: darkgray;
 }
+
+/*This is how to make the ugly default underline on a link disappear*/
+a {
+    text-decoration: none;
+}
+
+/*This is the AND/ALSO selector, you can choose more than 1 tag*/
+h1,h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*This changes multiple and you can use the child selector as well here*/
+h1, article > p {
+    background-color: aquamarine;
+}
+
+/*Descendant selector, any child will be selected even if it is not direct*/
+main p {
+    color: orange;
+}
+
+/*This is the Adjacent selector, the 2nd tag has to literally be the tag directly after the first (siblings) It will pick
+at most ONE SIBLING*/
+iframe + p {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+}
+
+/*This is the younger sibling selector will select ALL younger siblings that it applies to.*/
+/*img ~ p*/ 
+    /*I'm not filling this in*/
