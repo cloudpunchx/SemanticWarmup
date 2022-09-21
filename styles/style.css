@@ -9,9 +9,11 @@ p {
     font-style: italic;
 }   
 
+/*Read SELECTORS notes, when reading them just break it down by reading right to left.*/
+
 /*This is a Child Selector, in notes week3sep20 More Selectors and Specifity*/
-nav > a {
-    background-color: darkgray;
+article > h3 {
+    background-color: rgb(255, 255, 255);
 }
 
 /*This is how to make the ugly default underline on a link disappear*/
@@ -36,6 +38,7 @@ main p {
 
 /*This is the Adjacent selector, the 2nd tag has to literally be the tag directly after the first (siblings) It will pick
 at most ONE SIBLING*/
+/*Also to make a border you need all 3 of these attributes in any order*/
 iframe + p {
     border-width: 5px;
     border-color: black;
@@ -45,3 +48,55 @@ iframe + p {
 /*This is the younger sibling selector will select ALL younger siblings that it applies to.*/
 /*img ~ p*/ 
     /*I'm not filling this in*/
+
+/*Try putting something like this example: 
+h1.gardenpost
+you can hover over it after and it will give you info on how to use this one.
+This example would be selecing any .gardenpost class within H1's*/
+
+/*If you are styling something with the SAME Specificity and there are 2 CSS 
+pages, it will use the younger CSS rule over the other CSS page. But remember,
+that is only if they are the same SPECIFICITY as each other.*/
+
+/*Pseudo Selectors, the selector can be as long as you need (the first tag)*/
+p:hover {
+    color: blue;
+    border-width: 5px;
+    border-color: black;
+    border-style: dotted;
+}
+
+img:active {
+    height: 600px;
+}
+
+a:link {
+    color: rgb(148, 14, 92);
+}
+
+a:visited {
+    color: rgb(148, 14, 92);
+}
+
+/*The NOT selector example: 
+p:not(.exampleclass){
+    font weight:bold;
+} (DONE)
+
+THIS would bold everything on the page except .exampleclass
+not(.exampleclass){
+    font weight:bold; */
+
+/*This would select the element that is the 2nd child of its parent,
+you can put any number there.
+a:nth-child(2){
+    border: solid 3px rgb(255, 0, 0);
+}
+
+a:nth-of-type(2){
+    border: solid 3px rgb(255, 0, 0);
+}
+
+THERE ARE LOTS MORE
+*/
+
